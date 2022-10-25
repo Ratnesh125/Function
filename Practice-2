@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void fun(){
+  
+    static int x = 1;
+    int y = 1;
+    
+    x++;
+    y++;
+    
+    cout << x << " " << y << endl;
+}
+
+int main() {
+	fun();
+	fun();
+	fun();
+	return 0;
+}
+
+so when 1st time fun is called 
+static int x=1; 
+this line get executed
+output - 2 2
+IN 2nd call this line is not executed
+output 4 2
+IN 3nd call again this line is not executed
+output 6 2
+
+coz "static" is executed only once.
+
+
+
